@@ -4,5 +4,5 @@
 
 int main(int argc, char **argv)
 {
-	printf("Hello Worl");
+	printf("Hello World");
 }
