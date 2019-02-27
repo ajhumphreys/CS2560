@@ -1,35 +1,26 @@
 // Andrew Humphreys CS 2560
 // HW 3 Problem 3
 
-# include <stdio.h>
-# include <ctype.h>
 
-int ROWS = 15;
-int COLS = 30;
-
-void CharArInit2D(char ar[ROWS][COLS], char fill);
-void PrintSeats(char ar1[ROWS][COLS], int ar2[]);
-void PrintIntAr1D(int ar[], int size);
-void PrintFlAr1D(float ar[], int size);
-void NumArInit(int ar[], int size);
-void NumArFill(int ar[], int size, int fill);
-void FloatArInit(float ar[], int size);
-int In2DArrayCheck(char ar1[ROWS][COLS], int ar2[], int size);
-void ChangeElement(char ar[ROWS][COLS], int row, int col, char c);
-int GetInt(char prompt[], int min, int max, char error[]);
-void GetSeats(char ar[ROWS][COLS], int *seatNum, int *row, int *colStart, char empty);
-int GetChoice();
-char GetChar(char prompt[], char good[], int size, char error[]);
-int EmptyCheck(char ar[ROWS][COLS], int row, int start, int num, char empty);
-char GetEmptyChoice();
+# include "project1header.h"
 
 int main()
 {
+	FILE *fp;
+	float rowPrice[ROWS];
+	fp = fopen("ticketPrices.txt", "r");
+
+	for(int i = 1; i < ROWS; i++)
+	{
+		fscanf(fp, "%f/n", &rowPrice[i]);
+	}
+
+	fclose(fp);
+
 	char theater[ROWS][COLS];
 	char empty = '*';
 	char fill = '#';
 	int seatNum[COLS];
-	float rowPrice[15] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
 	int seatNumBuy;
 	int rowBuy;
 	int seatStartBuy;
@@ -59,7 +50,6 @@ int main()
 
 	CharArInit2D(theater, empty);
 	NumArInit(seatNum, COLS);
-	//FloatArInit(rowPrice, ROWS);
 
 	while(run == 1)
 	{
@@ -82,7 +72,7 @@ int main()
 					ChangeElement(theater, rowBuy - 1, i - 1, fill);
 				}
 
-				sale = seatNumBuy * rowPrice[rowBuy - 1];
+				sale = seatNumBuy * rowPrice[rowBuy];
 				totalSale += sale;
 
 				emptySeats -= seatNumBuy;
@@ -155,18 +145,23 @@ void CharArInit2D(char ar[ROWS][COLS], char fill)
 
 void PrintSeats(char ar1[ROWS][COLS], int ar2[])
 {
+	// Title
 	printf("\t\t    Seats\n\t");
 
+	// Seat Number
 	for(int a = 0; a < COLS; a++)
 	{
 		printf("%d", ar2[a]);
 	}
 	printf("\n");
 
+
 	for(int i = 0; i < ROWS; i++)
 	{
+		// Row Number
 		printf("Row %d\t", i + 1);
 
+		// Each Seat
 		for(int j = 0; j < COLS; j++)
 		{
 			printf("%c",ar1[i][j]);
