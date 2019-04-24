@@ -1,0 +1,386 @@
+\hypertarget{class_date}{}\section{Date Class Reference}
+\label{class_date}\index{Date@{Date}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_date_a8852e910e80f96d9fbf496f19a1481c5}{Date}} (int m, int d, int y)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_date}{Date}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}{Date}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor for \mbox{\hyperlink{class_date}{Date}} class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_date_aa05e21ab88416e8f74f3f58abf80770f}{Find\+Max\+Days}} (int m, int y)
+\begin{DoxyCompactList}\small\item\em Function that finds the number of days in a month. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_date_ac195c8a2d57b37dcbf3f0c555d403b5e}{Valid\+Date}} (int m, int d, int y)
+\begin{DoxyCompactList}\small\item\em Function to see if the date is possible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_ae47ff4dbe38076b995703ecb4aa5c602}{Set\+Month}} (int m)
+\begin{DoxyCompactList}\small\item\em Function to set the month. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_ab2d0573c89abb758c92b429874ad9ae2}{Set\+Day}} (int d)
+\begin{DoxyCompactList}\small\item\em Function to set the day. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_ae77d46d475c904d1fabcb91933034514}{Set\+Year}} (int y)
+\begin{DoxyCompactList}\small\item\em Function to set the year. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_a885f573b35217aef6e4f35a8ac203c35}{Print\+Date\+Num}} ()
+\begin{DoxyCompactList}\small\item\em Function to print the date in M\+M/\+D\+D/\+Y\+Y\+YY format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_a303bf76ec61948983685b333392a9559}{Print\+Date\+US}} ()
+\begin{DoxyCompactList}\small\item\em Function to print the date in Month Day, Year format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_afcaa5f92016d63644845ce1d934a339a}{Print\+Date\+Intl}} ()
+\begin{DoxyCompactList}\small\item\em Function to print the date in Day Month Year format. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_date_a63f7060a7a7997e289e5e885f84557e5}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Operator overload to postfix increment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_date_ac2237a5f9f832bb521fe8f299a47db95}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em Operator overload to postfix decrement operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_date_ab672204162beca5eca19c967cac9cd18}{operator==}} (const \mbox{\hyperlink{class_date}{Date}} \&right)
+\begin{DoxyCompactList}\small\item\em Operator overload to equal operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_date_ac90afc16b9a3b887c960861643fc0ba1}{operator$>$}} (const \mbox{\hyperlink{class_date}{Date}} \&right)
+\begin{DoxyCompactList}\small\item\em Operator overload to greater than operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_date_ad7637f53eec6eafb2edcfc76c5ef8696}{operator$<$}} (const \mbox{\hyperlink{class_date}{Date}} \&right)
+\begin{DoxyCompactList}\small\item\em Operator overload to less than operator. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_date_a45c0bb5dfe6d8bcfc7093b5671ae167a}{operator-\/}} (const \mbox{\hyperlink{class_date}{Date}} \&right)
+\begin{DoxyCompactList}\small\item\em Operator overload to subtract operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_date_a7396647c65aa5f260ed37f8fc369fe5f}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_date}{Date}} \&date)
+\begin{DoxyCompactList}\small\item\em Operator overload to insertion operator. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_date_ace64caa31aaaf69efcd86f01b5b549c0}{operator $>$$>$}} (istream \&is, \mbox{\hyperlink{class_date}{Date}} \&date)
+\begin{DoxyCompactList}\small\item\em Operator overload to extraction operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_date_a8852e910e80f96d9fbf496f19a1481c5}\label{class_date_a8852e910e80f96d9fbf496f19a1481c5}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{int}]{m,  }\item[{int}]{d,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \mbox{\hyperlink{class_date}{Date}} class. 
+
+Checks if the date is valid, if not it sets the month and year to the invalid date number (0).
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Month of the date \\
+\hline
+{\em d} & Day of the date \\
+\hline
+{\em y} & Year of the date \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}\label{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor for \mbox{\hyperlink{class_date}{Date}} class. 
+
+Sets date to January 1st, 2000. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_date_aa05e21ab88416e8f74f3f58abf80770f}\label{class_date_aa05e21ab88416e8f74f3f58abf80770f}} 
+\index{Date@{Date}!FindMaxDays@{FindMaxDays}}
+\index{FindMaxDays@{FindMaxDays}!Date@{Date}}
+\subsubsection{\texorpdfstring{FindMaxDays()}{FindMaxDays()}}
+{\footnotesize\ttfamily int Date\+::\+Find\+Max\+Days (\begin{DoxyParamCaption}\item[{int}]{m,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function that finds the number of days in a month. 
+
+For February, this function checks if it has 28 or 29 days based on the year. If it is another month it checks if it is one of the months that has 30 days, if not then it has 31 days. It will then set the variable {\ttfamily max\+Num} to the index of {\ttfamily max\+Day} with that number of days.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Month of the date \\
+\hline
+{\em y} & Year of the date\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+max\+Num Index of the array that contains the possibilities for maximum days. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_a63f7060a7a7997e289e5e885f84557e5}\label{class_date_a63f7060a7a7997e289e5e885f84557e5}} 
+\index{Date@{Date}!operator++@{operator++}}
+\index{operator++@{operator++}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Date\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator overload to postfix increment operator. 
+
+This will create a temporary \mbox{\hyperlink{class_date}{Date}} object with the same month day and year as the current date. It will then chick if the next day is a valid date. If it is then it will increment the day. If it is not then it is the end of the month and it will check if the next month is valid. If it is then it will increment the month and set the day to 1. If it is not valid then that means it is the end of the year so it will set the month and day to 1 and increment the year.
+
+\begin{DoxyReturn}{Returns}
+temp The temporary date that is incremented. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_a45c0bb5dfe6d8bcfc7093b5671ae167a}\label{class_date_a45c0bb5dfe6d8bcfc7093b5671ae167a}} 
+\index{Date@{Date}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily int Date\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator overload to subtract operator. 
+
+This will pass in a \mbox{\hyperlink{class_date}{Date}} object from the right side of the less than operator. It initializes {\ttfamily count} to zero and creates a new \mbox{\hyperlink{class_date}{Date}} object {\ttfamily left}. It then compares {\ttfamily left} to {\ttfamily right}. If {\ttfamily left} is bigger it runs a loop to decrement {\ttfamily left} and increment {\ttfamily count} until {\ttfamily left} and {\ttfamily right} are the same. If {\ttfamily left} is smaller it increments {\ttfamily left} and increments {\ttfamily count} until they are the same. It then returns {\ttfamily count}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & The right side of the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+count Variable for the amount of days between the two dates. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_ac2237a5f9f832bb521fe8f299a47db95}\label{class_date_ac2237a5f9f832bb521fe8f299a47db95}} 
+\index{Date@{Date}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Date\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator overload to postfix decrement operator. 
+
+This will create a temporary \mbox{\hyperlink{class_date}{Date}} object with the same month day and year as the current date. It will then chick if the previous day is a valid date. If it is then it will decrement the day. If it is not then it is the beginning of the month and it will check if the previous month is valid. If it is then it will decrement the month and set the day to the last day of that month. If it is not valid then that means it is the beginning of the year so it will set the month to 12 and day to 31 and decrement the year.
+
+\begin{DoxyReturn}{Returns}
+temp The temporary date that is decremented. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_ad7637f53eec6eafb2edcfc76c5ef8696}\label{class_date_ad7637f53eec6eafb2edcfc76c5ef8696}} 
+\index{Date@{Date}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Date\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator overload to less than operator. 
+
+This will pass in a \mbox{\hyperlink{class_date}{Date}} object from the right side of the less than operator. It creates a bool variable {\ttfamily status}. It first checks if the year on the left is less than the year on the right. If it is then it sets {\ttfamily status} to true. If not then it checks if the years are equal and the month on the left is less than the right. If it is then it sets {\ttfamily status} to true. If not then it checks if the month and year are the same and the day on the left is less than the day on the right. If it is then {\ttfamily status} is set to true, if not then {\ttfamily status} is set to false. It then returns {\ttfamily status}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & The right side of the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status Bool variable for whether the first date is less than the second date. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_ab672204162beca5eca19c967cac9cd18}\label{class_date_ab672204162beca5eca19c967cac9cd18}} 
+\index{Date@{Date}!operator==@{operator==}}
+\index{operator==@{operator==}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Date\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator overload to equal operator. 
+
+This will pass in a \mbox{\hyperlink{class_date}{Date}} object from the right side of the equal operator. It creates a bool variable {\ttfamily status}. If the month day and year of the two objects are the same then it sets {\ttfamily status} to true. If not then {\ttfamily status} is false. It then returns {\ttfamily status}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & The right side of the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status Bool variable for whether the two objects are equal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_ac90afc16b9a3b887c960861643fc0ba1}\label{class_date_ac90afc16b9a3b887c960861643fc0ba1}} 
+\index{Date@{Date}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Date\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator overload to greater than operator. 
+
+This will pass in a \mbox{\hyperlink{class_date}{Date}} object from the right side of the greater than operator. It creates a bool variable {\ttfamily status}. It first checks if the year on the left is greater than the year on the right. If it is then it sets {\ttfamily status} to true. If not then it checks if the years are equal and the month on the left is greater than the right. If it is then it sets {\ttfamily status} to true. If not then it checks if the month and year are the same and the day on the left is greater than the day on the right. If it is then {\ttfamily status} is set to true, if not then {\ttfamily status} is set to false. It then returns {\ttfamily status}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & The right side of the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status Bool variable for whether the first date is greater than the second date. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_afcaa5f92016d63644845ce1d934a339a}\label{class_date_afcaa5f92016d63644845ce1d934a339a}} 
+\index{Date@{Date}!PrintDateIntl@{PrintDateIntl}}
+\index{PrintDateIntl@{PrintDateIntl}!Date@{Date}}
+\subsubsection{\texorpdfstring{PrintDateIntl()}{PrintDateIntl()}}
+{\footnotesize\ttfamily void Date\+::\+Print\+Date\+Intl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to print the date in Day Month Year format. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_a885f573b35217aef6e4f35a8ac203c35}\label{class_date_a885f573b35217aef6e4f35a8ac203c35}} 
+\index{Date@{Date}!PrintDateNum@{PrintDateNum}}
+\index{PrintDateNum@{PrintDateNum}!Date@{Date}}
+\subsubsection{\texorpdfstring{PrintDateNum()}{PrintDateNum()}}
+{\footnotesize\ttfamily void Date\+::\+Print\+Date\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to print the date in M\+M/\+D\+D/\+Y\+Y\+YY format. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_a303bf76ec61948983685b333392a9559}\label{class_date_a303bf76ec61948983685b333392a9559}} 
+\index{Date@{Date}!PrintDateUS@{PrintDateUS}}
+\index{PrintDateUS@{PrintDateUS}!Date@{Date}}
+\subsubsection{\texorpdfstring{PrintDateUS()}{PrintDateUS()}}
+{\footnotesize\ttfamily void Date\+::\+Print\+Date\+US (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to print the date in Month Day, Year format. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_ab2d0573c89abb758c92b429874ad9ae2}\label{class_date_ab2d0573c89abb758c92b429874ad9ae2}} 
+\index{Date@{Date}!SetDay@{SetDay}}
+\index{SetDay@{SetDay}!Date@{Date}}
+\subsubsection{\texorpdfstring{SetDay()}{SetDay()}}
+{\footnotesize\ttfamily void Date\+::\+Set\+Day (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to set the day. 
+
+This function first checks if the day is valid. If it isn\textquotesingle{}t then it sets the day to 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Day of the date.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_ae47ff4dbe38076b995703ecb4aa5c602}\label{class_date_ae47ff4dbe38076b995703ecb4aa5c602}} 
+\index{Date@{Date}!SetMonth@{SetMonth}}
+\index{SetMonth@{SetMonth}!Date@{Date}}
+\subsubsection{\texorpdfstring{SetMonth()}{SetMonth()}}
+{\footnotesize\ttfamily void Date\+::\+Set\+Month (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to set the month. 
+
+This function first checks if the month is valid. If it isn\textquotesingle{}t then it sets the month to 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Month of the date.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_ae77d46d475c904d1fabcb91933034514}\label{class_date_ae77d46d475c904d1fabcb91933034514}} 
+\index{Date@{Date}!SetYear@{SetYear}}
+\index{SetYear@{SetYear}!Date@{Date}}
+\subsubsection{\texorpdfstring{SetYear()}{SetYear()}}
+{\footnotesize\ttfamily void Date\+::\+Set\+Year (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to set the year. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & Year of the date.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_ac195c8a2d57b37dcbf3f0c555d403b5e}\label{class_date_ac195c8a2d57b37dcbf3f0c555d403b5e}} 
+\index{Date@{Date}!ValidDate@{ValidDate}}
+\index{ValidDate@{ValidDate}!Date@{Date}}
+\subsubsection{\texorpdfstring{ValidDate()}{ValidDate()}}
+{\footnotesize\ttfamily bool Date\+::\+Valid\+Date (\begin{DoxyParamCaption}\item[{int}]{m,  }\item[{int}]{d,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to see if the date is possible. 
+
+This function first checks if the month is between 1 and 12. Then it checks if the day is between 1 and the maximum number of days in that month.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Month of the date \\
+\hline
+{\em d} & Day of the date \\
+\hline
+{\em y} & Year of the date\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valid Variable that will be true if the date is possible and false if not possible. 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_date_ace64caa31aaaf69efcd86f01b5b549c0}\label{class_date_ace64caa31aaaf69efcd86f01b5b549c0}} 
+\index{Date@{Date}!operator $>$$>$@{operator $>$$>$}}
+\index{operator $>$$>$@{operator $>$$>$}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator $>$$>$}{operator >>}}
+{\footnotesize\ttfamily istream\& operator $>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator overload to extraction operator. 
+
+This will create an array {\ttfamily date} where the first element is the month number, the second element is the day and the third element is the year. Ir prompts the user for the month day and year. It then changes the month day and year of the date to the entered information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & The input stream. \\
+\hline
+{\em date} & The date to be input.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+is The input date. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_date_a7396647c65aa5f260ed37f8fc369fe5f}\label{class_date_a7396647c65aa5f260ed37f8fc369fe5f}} 
+\index{Date@{Date}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator overload to insertion operator. 
+
+This will output the name of the month followed by the day and a comma, followed by the year like the following\+: January 1, 2000.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream. \\
+\hline
+{\em date} & The date to be output.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+os The output date. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Err/\+Desktop/\+C\+S 2560/\+Project 2/\+Project 2 Problem 1 -\/ Copy/\+Project 2 Problem 1/Project 2 Problem 1.\+cpp\end{DoxyCompactItemize}
